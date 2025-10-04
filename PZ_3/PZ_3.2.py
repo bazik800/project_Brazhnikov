@@ -9,7 +9,7 @@ while True:
         d = input("Введите функцию + - * /: ")
         
         if d == "+":
-            print(a*b)
+            print(a+b)
             
         elif d == "-":
             print(a-b)
