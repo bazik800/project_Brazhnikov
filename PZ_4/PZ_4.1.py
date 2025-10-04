@@ -8,23 +8,20 @@ while True:
         c = int(input("Введите третье число: "))
         d = int(input("Введите четвертое число: "))
         k = 0
-        l = []
+        kk = 0
         if a<0:
-            l.append(a)
+            kk+=a
             k+=1 
-            print(l)
-        elif b<0:
-            l.append(b)
+        if b<0:
+            kk+=b
             k+=1
-            print(l)
-        elif c<0:
-            l.append(c)
+        if c<0:
+            kk+=c
             k+=1
-        elif d<0:
-            l.append(d)
+        if d<0:
+            kk+=d
             k+=1
-        t=sum(l)
-        print(t, l, k)
+        print("Сумма отрицательных чисел", kk, "количество отрицательных чисел", k)
         break
     except ValueError:
         print("Введите число правильно!")
