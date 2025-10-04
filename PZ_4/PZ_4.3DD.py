@@ -13,7 +13,7 @@ while True:
         
         while i <= n:
             f *= i
-            s+=F
+            s+=f
             i+=1
         print(s)
         break
