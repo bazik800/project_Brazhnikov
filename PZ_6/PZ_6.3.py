@@ -7,13 +7,13 @@ while True:
         n = int(input("Введите размер списка - "))
         K = int(input("Введите число K - "))
         s = [random.randint(0,100) for i in range(n)]
-        d =[]
+        d =[0] * n
         if 1>K>n:
             print('ошибка')
             break
         print(s)
-        for i in range(K):
-            d = s[-i:] + s[:-i]
+        for i in range(n-K):
+            d[i+K] = s[i]
         print(d)
         break
 
