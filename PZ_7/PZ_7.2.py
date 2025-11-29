@@ -12,12 +12,12 @@ for i in range(len(a)):
     if d[i] in s:
         g = s.index(d[i])
         h = (g + 1)
-        f += [s[h]]
+        f.append(s[h])
         print(s[h])
     elif d[i] in s1:
         g = s1.index(d[i])
         h = (g + 1)
-        f += [s1[h]]
+        f.append(s1[h])
         print(s1[h])
 
 
