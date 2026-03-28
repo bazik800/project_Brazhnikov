@@ -1,16 +1,14 @@
 #Из предложенного файла text18-6.txt вывести на экран его содержимое, кол-во пробельных символов. 
 #Сформировать новый файл в который можно поместить текст  стихотворной форме предварительно заменив все знаки пунктуации на знак "!"
-a = open('PZ10/10.2/text18-6.txt', 'r')
-s = open('PZ10/10.2/new_text.txt', 'w')
+a = open('text18-6.txt', 'r')
+s = open('new_text.txt', 'w')
 c = 0
 d = a.read()
 for i in d:
     if i == ' ':
         c += 1
 print(d, c, sep = '\n')
-text = d.replace('»','!').replace('«','!').replace('.','!').replace(',','!').replace('?','!')
+text = d.replace('»','!').replace('«','!').replace('.','!').replace(',','!').replace('?','!').replace(':','!')
 s.write(text)
 a.close
 s.close
-
-    
