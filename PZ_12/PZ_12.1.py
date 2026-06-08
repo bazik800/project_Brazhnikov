@@ -1,10 +1,17 @@
-# В матрице элементы первого столбца возвести в куб.
+import random
+x = int(input("Введите количество строк: "))
+y = int(input("Введите количество столбцов: "))
+
+# Создаем матрицу с случайными числами от 1 до 10
 matrix = [
-    [2, 3, 4],
-    [5, 6, 7],
-    [8, 9, 1]
+    [random.randint(1, 10) for _ in range(y)]
+    for _ in range(x)
 ]
 
+for row in matrix:
+    print(row)
+
 result = list(map(lambda row: [row[0] ** 3] + row[1:], matrix))
-print(matrix)
-print(result)
+print("\n")
+for row in result:
+    print(row)
