@@ -1,15 +1,20 @@
-# Сгенерировать матрицу, в которой элементы больше 10 заменяются на 0.
-source_matrix = [
-    [5, 12, 3],
-    [20, 8, 11],
-    [1, 15, 7]
-]
+import random
+x = int(input("Введите количество строк: "))
+y = int(input("Введите количество столбцов: "))
 
-print(source_matrix)
+# Сгенерировать матрицу, в которой элементы больше 10 заменяются на 0.
+matrix = [
+    [random.randint(1, 20) for _ in range(y)]
+    for _ in range(x)
+]
+for row in matrix:
+    print(row)
+
 
 matrix2 = [
-    list(map(lambda x: 0 if x > 10 else x, row)) 
-    for row in source_matrix
+    list(map(lambda x: 0 if x > 10 else x, row))
+    for row in matrix
 ]
-
-print(matrix2)
+print("\n")
+for row in matrix2:
+    print(row)
